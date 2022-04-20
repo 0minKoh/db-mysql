@@ -19,7 +19,14 @@ app.get('/api/customers', async (req, res) => {
   res.send(customers)
 })
 
+//post 정보 추가
 app.post('/api/customers/insert', async (req, res) => {
   const result = await mysql.query('customerInsert', req.body.param)
+  res.send(result)
+})
+
+//put 정보 수정
+app.put('/api/customers/update', async (req, res) => {
+  const result = await mysql.query('customerUpdate', req.body.param)
   res.send(result)
 })
