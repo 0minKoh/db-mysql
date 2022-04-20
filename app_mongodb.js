@@ -14,3 +14,11 @@ app.get('/customers', async (req, res) => {
   const customer = await Customer.find()
   console.log(customer)
 })
+
+//data 추가
+await Customer.create({
+  name: 'Customer',
+  email: 'customer@example.com',
+  phone: '010-2222-2222',
+  address: ''
+})
