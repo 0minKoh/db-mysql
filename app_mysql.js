@@ -30,3 +30,10 @@ app.put('/api/customers/update', async (req, res) => {
   const result = await mysql.query('customerUpdate', req.body.param)
   res.send(result)
 })
+
+//delete 정보 수정
+app.delete('/api/customers/delete/:id', async (req,res) => {
+  const {id} = req.params;
+  const result = await mysql.query('customerDelete', id)
+  res.send(result)
+})
