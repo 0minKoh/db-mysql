@@ -28,3 +28,8 @@ await Customer.create({
 //.findByIdAndUpdate
 
 await Customer.findByIdAndUpdate(id, { phone: '010-2222-2222' })
+
+//data 삭제
+//.deleteMany
+
+await Customer.deleteMany({ name: '/Customer/' })
