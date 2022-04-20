@@ -16,9 +16,15 @@ app.get('/customers', async (req, res) => {
 })
 
 //data 추가
+//.create
 await Customer.create({
   name: 'Customer',
   email: 'customer@example.com',
   phone: '010-2222-2222',
   address: ''
 })
+
+//data 수정
+//.findByIdAndUpdate
+
+await Customer.findByIdAndUpdate(id, { phone: '010-2222-2222' })
